@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.Controller"
+            style="-fx-background-color: Pink"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+         <Button fx:id="" layoutX="215.0" layoutY="205.0" mnemonicParsing="false"  onAction="#gotologin" style="-fx-background-color: gray ; -fx-text-fill: #fff ;" text="Entered" />
+         <Button fx:id="close" cancelButton="true" layoutX="225.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" style="-fx-background-color: gray ; -fx-text-fill: #fff;" text="Exit"/>
+
+    </children>
+
+</AnchorPane>

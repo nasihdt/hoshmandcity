@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="667.0" prefWidth="1084.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditasController">
+   <children>
+      <TextField fx:id="name" layoutX="127.0" layoutY="72.0" promptText="name" />
+      <TextField fx:id="lastname" layoutX="127.0" layoutY="123.0" promptText="lastname" />
+      <TextField fx:id="personely" layoutX="127.0" layoutY="168.0" promptText="personely" />
+      <TextField fx:id="salary" layoutX="127.0" layoutY="273.0" promptText="salary" />
+      <TextField fx:id="sabeghe" layoutX="127.0" layoutY="330.0" promptText="sabeghe" />
+      <Label layoutX="293.0" layoutY="14.0" text="Information Assistants">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="71.0" text="Name :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="122.0" text="Lastname :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="167.0" text="Personely :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="221.0" text="HireDate :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="271.0" text="Salary :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="329.0" text="Sabeghe :">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="date" layoutX="127.0" layoutY="221.0" prefHeight="31.0" prefWidth="187.0" text="1/11/2003" promptText="date" />
+      <TextArea fx:id="txtResult" layoutX="35.0" layoutY="475.0" prefHeight="177.0" prefWidth="277.0" />
+      <Button fx:id="add" layoutX="153.0" layoutY="378.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="148.0" onAction="#insertAssistant" text="Add information" />
+      <Separator layoutX="349.0" layoutY="71.0" orientation="VERTICAL" prefHeight="581.0" prefWidth="0.0" style="-fx-background-color: black;" />
+      <Separator layoutX="52.0" layoutY="432.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: black;" />
+      <TextField fx:id="edit_name" layoutX="506.0" layoutY="88.0" promptText="new name" />
+      <TextField fx:id="edit_lastname" layoutX="847.0" layoutY="88.0" promptText="new lastname" />
+      <TextField fx:id="edit_salary" layoutX="506.0" layoutY="141.0" promptText="new salary" />
+      <TextField fx:id="edit_sabeghe" layoutX="847.0" layoutY="139.0" promptText="new sabeghe" />
+      <TextField fx:id="prs" layoutX="506.0" layoutY="215.0" promptText="personely" />
+      <Button fx:id="btn_update" layoutX="402.0" layoutY="291.0" onAction="#updateAssistant" mnemonicParsing="false" text="Update" />
+      <Button fx:id="btn_delete" layoutX="510.0" layoutY="291.0" mnemonicParsing="false" onAction="#deleteAssistant" text="Delete" />
+      <Label layoutX="393.0" layoutY="89.0" text="Edit name :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="389.0" layoutY="143.0" text="Edit Salary :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="395.0" layoutY="217.0" text="Personely :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="707.0" layoutY="88.0" text="Edit lastname :">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="715.0" layoutY="140.0" text="Edit Sabeghe :">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="Result" layoutX="41.0" layoutY="435.0" text="Result :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="376.0" layoutY="334.0" prefHeight="224.0" prefWidth="679.0">
+        <columns>
+          <TableColumn fx:id="name_column" prefWidth="90.0" text="Name" />
+          <TableColumn fx:id="las_column" prefWidth="87.0" text="Lastname" />
+            <TableColumn fx:id="prs_column" prefWidth="103.0" text="Personely" />
+            <TableColumn fx:id="date_column" prefWidth="145.0" text="HireDate" />
+            <TableColumn fx:id="salary_column" prefWidth="147.0" text="Salary" />
+            <TableColumn fx:id="sabeghe_column" prefWidth="106.0" text="Sabeghe" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="408.0" layoutY="591.0" mnemonicParsing="false" onAction="#gotomenupage" text="Back">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

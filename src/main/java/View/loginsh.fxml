@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="486.0" prefWidth="728.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginshController">
+   <children>
+      <Label layoutX="221.0" layoutY="57.0" prefHeight="106.0" prefWidth="274.0" text="Login shahrdar">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="37.0" />
+         </font>
+      </Label>
+      <TextField fx:id="namesh" layoutX="265.0" layoutY="192.0" promptText="your name" />
+      <TextField fx:id="lastnamesh" layoutX="265.0" layoutY="256.0" promptText="your lastname" />
+      <Button fx:id="back" layoutX="233.0" layoutY="365.0" mnemonicParsing="false" onAction="#backmenupage" text="Back" textFill="#af4c16">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="login" layoutX="412.0" layoutY="367.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="80.0" onAction="#loginsh" text="Login" textFill="#af4c16">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Label layoutX="89.0" layoutY="189.0" prefHeight="38.0" prefWidth="165.0" text="Enter your name :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="257.0" text="Enter your lastname :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

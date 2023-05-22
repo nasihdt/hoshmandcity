@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EnteredController">
+          <children>
+              <Button fx:id="btnlogin" layoutX="328.0" layoutY="309.0" mnemonicParsing="false" onAction="#loginClick" text="login" />
+              <Button fx:id="back" layoutX="206.0" layoutY="309.0" mnemonicParsing="false" onAction="#backclick" text="Back" />
+      <Label layoutX="231.0" layoutY="27.0" text="login">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="52.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tx_username" layoutX="207.0" layoutY="133.0"  promptText="username"/>
+      <PasswordField fx:id="tx_password" layoutX="207.0" layoutY="200.0" promptText="password"/>
+      <Label layoutX="121.0" layoutY="138.0" text="Username" />
+      <Label layoutX="123.0" layoutY="205.0" text="Password" />
+
+
+
+          </children>
+</AnchorPane>

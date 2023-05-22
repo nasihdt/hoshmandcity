@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenupageController">
+   <children>
+      <Label layoutX="302.0" layoutY="14.0" prefHeight="31.0" prefWidth="106.0" text="Menu">
+         <font>
+            <Font name="Gabriola" size="55.0" />
+         </font>
+      </Label>
+
+      <Button layoutX="171.0" layoutY="185.0" mnemonicParsing="false" text="Creation M" onAction="#gotocreationM" textFill="#4817bb" />
+      <Button layoutX="52.0" layoutY="374.0"  mnemonicParsing="false" onAction="#loginsh" text="login " textFill="#4817bb" />
+      <Button fx:id="back" layoutX="56.0" layoutY="30.0" mnemonicParsing="false" onAction="#gotologinpage" scaleX="2.0" scaleY="2.0" text="Back" />
+      <Button fx:id="exit" layoutX="607.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" scaleX="2.0" scaleY="2.0" text="Exit" />
+      <Button fx:id="creationsh" layoutX="33.0" layoutY="185.0" mnemonicParsing="false" onAction="#initializeCols" prefHeight="31.0" prefWidth="106.0" text="Creation sh" textFill="#4817bb" />
+      <Label layoutX="52.0" layoutY="113.0" text="شهردار">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="113.0" text="معاون">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="314.0" layoutY="113.0" text="بازرسان">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="422.0" layoutY="113.0" text="کارمندان">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="113.0" text="کارمند حراست">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <Button layoutX="306.0" layoutY="185.0" mnemonicParsing="false" text="Creation B" onAction="#gotocreationBz" textFill="#4817bb" />
+      <Button layoutX="419.0" layoutY="185.0" mnemonicParsing="false" text="Creation K" onAction="#gotocreationemp" textFill="#4817bb" />
+      <Button layoutX="554.0" layoutY="185.0" mnemonicParsing="false" text="Creation H" onAction="#gotocreationhs" textFill="#4817bb" />
+      <Line endX="300.0" layoutX="355.0" layoutY="90.0" startX="-300.0" />
+      <Line endX="300.0" layoutX="341.0" layoutY="470.0" startX="-300.0" />
+      <Button layoutX="253.0" layoutY="507.0" mnemonicParsing="false" onAction="#gotoseeusers" text="See Persons">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

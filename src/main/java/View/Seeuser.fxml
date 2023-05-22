@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="772.0" prefWidth="1066.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SeeUserController">
+   <children>
+      <Label layoutX="386.0" layoutY="12.0" text="See users in Table">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_sh" layoutX="144.0" layoutY="70.0" prefHeight="78.0" prefWidth="814.0">
+        <columns>
+          <TableColumn fx:id="namesh_column" prefWidth="99.0" text="Name" />
+          <TableColumn fx:id="lassh_column" prefWidth="108.0" text="Lastname" />
+            <TableColumn fx:id="prssh_column" prefWidth="168.0" text="Personely" />
+            <TableColumn fx:id="datesh_column" prefWidth="179.0" text="Hire_date" />
+            <TableColumn fx:id="salarsh_column" prefWidth="170.0" text="Salary" />
+            <TableColumn fx:id="sabeghsh_column" prefWidth="89.0" text="Sabeghe" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table_assis" layoutX="144.0" layoutY="153.0" prefHeight="124.0" prefWidth="814.0">
+        <columns>
+          <TableColumn fx:id="nameas_column" prefWidth="99.0" text="Name" />
+          <TableColumn fx:id="lasas_column" prefWidth="109.0" text="Lastname" />
+            <TableColumn fx:id="prsas_column" prefWidth="169.0" text="Personely" />
+            <TableColumn fx:id="dateas_column" prefWidth="176.0" text="Hire_date" />
+            <TableColumn fx:id="salaras_column" prefWidth="176.0" text="Salary" />
+            <TableColumn fx:id="sabeghas_column" prefWidth="84.0" text="Sabeghe" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table_bz" layoutX="144.0" layoutY="289.0" prefHeight="109.0" prefWidth="814.0">
+        <columns>
+          <TableColumn fx:id="namebz_column" prefWidth="98.0" text="Name" />
+          <TableColumn fx:id="lasbz_column" prefWidth="109.0" text="Lastname" />
+            <TableColumn fx:id="prsbz_column" prefWidth="142.0" text="Personely" />
+            <TableColumn fx:id="datebz_column" prefWidth="141.0" text="Hire_date" />
+            <TableColumn fx:id="salarbz_column" prefWidth="152.0" text="Salary" />
+            <TableColumn fx:id="sabeghbz_column" prefWidth="87.0" text="Sabeghe" />
+            <TableColumn fx:id="hourbz_column" prefWidth="84.0" text="Hour" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table_emp" layoutX="144.0" layoutY="415.0" prefHeight="115.0" prefWidth="814.0">
+        <columns>
+          <TableColumn fx:id="nameemp_column" prefWidth="98.0" text="Name" />
+          <TableColumn fx:id="lasemp_column" prefWidth="109.0" text="Lastname" />
+            <TableColumn fx:id="prsemp_column" prefWidth="140.0" text="Personely" />
+            <TableColumn fx:id="dateemp_column" prefWidth="144.0" text="Hire_date" />
+            <TableColumn fx:id="salaremp_column" prefWidth="152.0" text="Salary" />
+            <TableColumn fx:id="sabeghemp_column" prefWidth="89.0" text="Sabeghe" />
+            <TableColumn fx:id="houremp_column" prefWidth="81.0" text="Hour" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table_hs" layoutX="144.0" layoutY="542.0" prefHeight="139.0" prefWidth="814.0">
+        <columns>
+          <TableColumn fx:id="namehs_column" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="lashs_column" prefWidth="107.0" text="Lastname" />
+            <TableColumn fx:id="prshs_column" prefWidth="104.0" text="Personely" />
+            <TableColumn fx:id="datehs_column" prefWidth="123.0" text="Hire_date" />
+            <TableColumn fx:id="salarhs_column" prefWidth="130.0" text="Salary" />
+            <TableColumn fx:id="sabeghhs_column" prefWidth="78.0" text="Sabeghe" />
+            <TableColumn fx:id="numshifths_column" prefWidth="109.0" text="Number_shift" />
+            <TableColumn fx:id="shifths_column" prefWidth="87.0" text="Shift" />
+        </columns>
+      </TableView>
+      <Label layoutX="22.0" layoutY="96.0" text="Shahrdar : ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="202.0" text="Assistant : ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="330.0" text="Bazras :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="459.0" text="Employee :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="584.0" text="Herasat :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="408.0" layoutY="690.0" mnemonicParsing="false" onAction="#gotomenupage" prefHeight="42.0" prefWidth="71.0" text="Back" />
+      <Button fx:id="show" layoutX="551.0" layoutY="695.0" mnemonicParsing="false" onAction="#seeusers" prefHeight="31.0" prefWidth="104.0" text="Show user" />
+   </children>
+</AnchorPane>

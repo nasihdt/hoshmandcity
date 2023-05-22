@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="676.0" prefWidth="1127.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditshController">
+   <children>
+      <TextField fx:id="name" layoutX="131.0" layoutY="38.0" promptText="Name" />
+      <Label layoutX="57.0" layoutY="38.0" prefHeight="31.0" prefWidth="46.0" text="Name" />
+      <Label layoutX="44.0" layoutY="84.0" prefHeight="31.0" prefWidth="73.0" text="Lastname" />
+      <Label layoutX="44.0" layoutY="127.0" prefHeight="31.0" prefWidth="73.0" text="Personely" />
+      <Label layoutX="48.0" layoutY="179.0" text="Hire_Date" />
+      <Label layoutX="60.0" layoutY="226.0" text="Salary" />
+      <Label layoutX="51.0" layoutY="269.0" text="Sabeghe" />
+      <TextField fx:id="lastname" layoutX="131.0" layoutY="84.0" promptText="Lastname" />
+      <TextField fx:id="personely" layoutX="131.0" layoutY="127.0" promptText="Personely" />
+      <TextField fx:id="salary" layoutX="131.0" layoutY="221.0" promptText="Salary" />
+      <TextField fx:id="sabeghe" layoutX="131.0" layoutY="264.0" promptText="Sabeghe" />
+      <Separator layoutX="358.0" layoutY="43.0" orientation="VERTICAL" prefHeight="609.0" prefWidth="0.0" style="-fx-background-color: black;" />
+      <TextArea fx:id="txtResult" layoutX="32.0" layoutY="419.0" prefHeight="215.0" prefWidth="302.0" />
+      <Label layoutX="32.0" layoutY="390.0" text="Result Console" />
+      <Button fx:id="add" layoutX="104.0" layoutY="310.0" mnemonicParsing="false" onAction="#insertShahrdar" prefHeight="38.0" prefWidth="169.0" text="Add Shahrdar" />
+      <Separator layoutX="16.0" layoutY="365.0" prefHeight="2.0" prefWidth="328.0" style="-fx-background-color: black;" />
+      <TextField fx:id="nameEdit" layoutX="400.0" layoutY="38.0" promptText="name" />
+      <TextField fx:id="lasEdit" layoutX="618.0" layoutY="38.0" promptText="lastname" />
+      <TextField fx:id="salarEdit" layoutX="400.0" layoutY="100.0" promptText="salary" />
+      <TextField fx:id="sabeghEdit" layoutX="618.0" layoutY="100.0" promptText="sabeghe" />
+      <Label layoutX="400.0" layoutY="14.0" text="Edit name" />
+      <Label layoutX="618.0" layoutY="14.0" text="Edit lastname" />
+      <Label layoutX="400.0" layoutY="74.0" text="Edit salary" />
+      <Label layoutX="618.0" layoutY="74.0" text="Edit sabeghe" />
+      <Label layoutX="400.0" layoutY="164.0" text="Personely" />
+      <TextField fx:id="prs" layoutX="394.0" layoutY="190.0" promptText="personely" />
+
+      <Button fx:id="update" layoutX="513.0" layoutY="249.0" mnemonicParsing="false" onAction="#updatShahrdarinfo" text="Update" />
+      <Button fx:id="delete" layoutX="630.0" layoutY="249.0" mnemonicParsing="false" onAction="#deletesh" text="Delete" />
+
+      <TableView fx:id="table" layoutX="388.0" layoutY="319.0" prefHeight="115.0" prefWidth="682.0">
+        <columns>
+          <TableColumn fx:id="name_column" prefWidth="95.0" text="Name" />
+          <TableColumn fx:id="las_column" prefWidth="118.0" text="Lastname" />
+            <TableColumn fx:id="prs_column" prefWidth="116.0" text="Personely" />
+            <TableColumn fx:id="hire_column" prefWidth="117.0" text="HireDate" />
+            <TableColumn fx:id="salar_column" prefWidth="149.0" text="Salary" />
+            <TableColumn fx:id="sabegh_column" prefWidth="84.0" text="Sabeghe" />
+        </columns>
+      </TableView>
+      <Button layoutX="421.0" layoutY="527.0" mnemonicParsing="false" onAction="#gotomenupage" prefHeight="55.0" prefWidth="127.0" text="Back">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Separator layoutX="385.0" layoutY="463.0" prefHeight="3.0" prefWidth="700.0" style="-fx-background-color: black;" />
+      <TextField fx:id="date" layoutX="131.0" layoutY="175.0" promptText="1/11/2003" />
+   </children>
+</AnchorPane>

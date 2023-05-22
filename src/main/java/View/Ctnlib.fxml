@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="566.0" prefWidth="975.0" style="-fx-background-color: #00FFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CtnLibController">
+    <children>
+        <TextField fx:id="name" layoutX="41.0" layoutY="133.0" prefHeight="31.0" prefWidth="220.0" promptText="Enter name" />
+        <TextField fx:id="phone" layoutX="41.0" layoutY="358.0" prefHeight="31.0" prefWidth="232.0" promptText="Enter number" />
+        <Label layoutX="304.0" layoutY="22.0" text="*Library department*">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="34.0" />
+            </font>
+        </Label>
+        <Label layoutX="41.0" layoutY="92.0" text="Name of the university :">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="314.0" text="Phone number :">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="38.0" layoutY="402.0" text="Address :">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Button fx:id="btn_creat" layoutX="97.0" layoutY="490.0" mnemonicParsing="false" onAction="#insertlibrary" text="Creat">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="btn_back" layoutX="337.0" layoutY="491.0" mnemonicParsing="false" onAction="#backmenupage" text="Back">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Button>
+        <TextArea fx:id="txt_result" layoutX="377.0" layoutY="317.0" prefHeight="144.0" prefWidth="369.0" />
+        <Separator layoutX="288.0" layoutY="105.0" orientation="VERTICAL" prefHeight="445.0" prefWidth="0.0" style="-fx-background-color: black;" />
+        <Label layoutX="304.0" layoutY="315.0" text="Result :">
+            <font>
+                <Font name="Book Antiqua" size="20.0" />
+            </font>
+        </Label>
+        <TableView fx:id="table" layoutX="313.0" layoutY="92.0" prefHeight="171.0" prefWidth="641.0">
+            <columns>
+                <TableColumn fx:id="name_column" prefWidth="105.0" text="Name " />
+                <TableColumn fx:id="phone_column" prefWidth="135.0" text="Phone number" />
+                <TableColumn fx:id="address_column" prefWidth="181.0" text="Address" />
+                <TableColumn fx:id="namebos_column" prefWidth="93.0" text="Name bos" />
+                <TableColumn fx:id="numemp_column" prefWidth="126.0" text="Number of emp" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtaddress" layoutX="41.0" layoutY="430.0" prefHeight="31.0" prefWidth="232.0" promptText="Write address" />
+        <Label layoutX="43.0" layoutY="164.0" text="Number of employee: ">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="41.0" layoutY="230.0" text="Name bos :">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="numemp" layoutX="44.0" layoutY="199.0" prefHeight="31.0" prefWidth="220.0" promptText="Enter number emp" />
+        <TextField fx:id="namebos" layoutX="45.0" layoutY="268.0" prefHeight="31.0" prefWidth="220.0" promptText="Enter name bos" />
+    </children>
+</AnchorPane>

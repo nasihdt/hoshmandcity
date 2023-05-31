@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="672.0" prefWidth="641.0" style="-fx-background-color: E3E4FA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PageOfRegController">
+   <children>
+      <ImageView fitHeight="43.0" fitWidth="74.0" layoutX="29.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@users.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_account" layoutX="87.0" layoutY="118.0" mnemonicParsing="false" style="-fx-background-color: E3E4FA;" text="User account">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="71.0" fitWidth="53.0" layoutX="173.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@list.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="239.0" layoutY="30.0" text="Registrar">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="33.0" />
+         </font>
+      </Label>
+      <Line endX="350.0" layoutX="289.0" layoutY="90.0" startX="-290.0" />
+      <Button fx:id="btn_seeusers" layoutX="264.0" layoutY="309.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="253.0" style="-fx-background-color: #DBF9DB;" text="See Teachers &amp; Students">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="178.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@edit.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="66.0" fitWidth="76.0" layoutX="166.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@manage.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_manage" layoutX="264.0" layoutY="410.0" mnemonicParsing="false" style="-fx-background-color: DBF9DB;" text="Manage request for teachers">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="75.0" fitWidth="66.0" layoutX="166.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Salary.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_pay" layoutX="261.0" layoutY="518.0" mnemonicParsing="false" style="-fx-background-color: DBF9DB;" text="Payment of teachers' salaries">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="19.0" />
+         </font>
+      </Button>
+      <Line endX="320.0" layoutX="320.0" layoutY="181.0" startX="-320.0" />
+      <Button fx:id="btn_back" layoutX="32.0" layoutY="600.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="81.0" style="-fx-background-color: E3E4FA;" text="Back">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Line endX="370.0" layoutX="270.0" layoutY="587.0" startX="-270.0" />
+      <Button fx:id="btn_teacher" layoutX="267.0" layoutY="215.0" mnemonicParsing="false" onAction="#gotoeditteacher" prefHeight="36.0" prefWidth="104.0" style="-fx-background-color: DBF9DB;" text="Teacher ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_student" layoutX="391.0" layoutY="215.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="104.0" style="-fx-background-color: DBF9DB;" text="Student">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

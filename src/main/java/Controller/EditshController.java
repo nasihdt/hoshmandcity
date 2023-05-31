@@ -1,6 +1,6 @@
 package Controller;
 
-//import Model.DAOshahrdar;
+
 import Model.Data;
 import Model.File;
 import Model.Shahrdar;
@@ -88,22 +88,25 @@ public class EditshController {
                   String editlast = lasEdit.getText();
                   String editsalar = salarEdit.getText();
                   String editsabegh = sabeghEdit.getText();
-                  int count = Integer.parseInt(sabeghe.getText()), sal = Integer.parseInt(salary.getText()), m, n,s;
-                  m = sal * 5 * count;
-                  n=m/100;
-                  s = sal + n;
-                  String sl = String.valueOf(s);
-                  if(!Data.shahrdar.getName().equals(editname) || !Data.shahrdar.getLastname().equals(editlast) || !Data.shahrdar.getSalary().equals(editsalar) || !Data.shahrdar.getSabeghe().equals(editsabegh)){
-                        Data.shahrdar.setName(editname);
-                        Data.shahrdar.setLastname(editlast);
-                        Data.shahrdar.setSalary(sl);
-                        Data.shahrdar.setSabeghe(editsabegh);
-                        //ShahrdarDAO.updateShinfo(prs.getText(),editname,editlast,editsalar,editsabegh);
-                        //File.writeshahrdar("C:\\Users\\Asus\\IdeaProjects\\hoshmandcity\\src\\main\\java\\Model\\1.Shahrdar");
-                        txtResult.setText("information is updated.\n"+Data.shahrdar.getName()+"\n"+Data.shahrdar.getLastname()+"\n"+sl+"\n"+Data.shahrdar.getSabeghe());
-                        table.refresh();
+
+                  for (int i = 0;i<Data.shlist.size();i++) {
+                        if(prs.getText().equals(Data.shlist.get(i).getPersonelynumber())){
+                        int count = Integer.parseInt(sabeghe.getText()), sal = Integer.parseInt(salary.getText()), m, n, s;
+                        m = sal * 5 * count;
+                        n = m / 100;
+                        s = sal + n;
+                        String sl = String.valueOf(s);
+
+                              Data.shlist.get(i).setName(editname);
+                              Data.shlist.get(i).setLastname(editlast);
+                              Data.shlist.get(i).setSalary(sl);
+                              Data.shlist.get(i).setSabeghe(editsabegh);
+                              txtResult.setText("information is updated.\n" + Data.shlist.get(i).getName() + "\n" + Data.shlist.get(i).getLastname() + "\n" + sl + "\n" + Data.shlist.get(i).getSabeghe());
+                              table.refresh();
+                              File.writeshahrdar("C:\\Users\\Asus\\IdeaProjects\\hoshmandcity\\src\\main\\java\\Model\\1.Shahrdar",Data.shlist);
 
 
+                        }
                   }
             }
             catch (Exception e){
@@ -126,7 +129,7 @@ public class EditshController {
                   dialog.showAndWait();
             }
             else {
-                  if (number == 1) {
+
                         try {
                               int count = Integer.parseInt(sabeghe.getText()), sal = Integer.parseInt(salary.getText()), m, n,s;
                               m = sal * 5 * count;
@@ -136,9 +139,7 @@ public class EditshController {
                               if(regexdate() && regexprs()) {
 
                                     Data.shahrdar = new Shahrdar(name.getText(), lastname.getText(), personely.getText(), date.getText(), sl.toString(), sabeghe.getText());
-
-                                    //ShahrdarDAO.insertsh(name.getText(),lastname.getText(),personely.getText(),date.getText(),salary.getText(),sabeghe.getText());
-
+                                    Data.shlist.add(Data.shahrdar);
                                     txtResult.setText("Shahrdar inserted! \n" + name.getText() + "\n" + lastname.getText() + "\n" + personely.getText() + "\n" + date.getText() + "\n" + sl.toString() + "\n" + sabeghe.getText());
 
                                     name_column.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -149,7 +150,7 @@ public class EditshController {
                                     sabegh_column.setCellValueFactory(new PropertyValueFactory<>("sabeghe"));
 
                                     table.getItems().add(Data.shahrdar);
-                                   File.writeshahrdar("C:\\Users\\Asus\\IdeaProjects\\hoshmandcity\\src\\main\\java\\Model\\1.Shahrdar");
+                                   File.writeshahrdar("C:\\Users\\Asus\\IdeaProjects\\hoshmandcity\\src\\main\\java\\Model\\1.Shahrdar",Data.shlist);
 
                               }
                               else if (!regexdate()){
@@ -173,14 +174,8 @@ public class EditshController {
                         }
 
 
-                  }
-                  else if (number>1){
-                        dialog.setTitle("Dialog box");
-                        ButtonType type = new ButtonType("Ok", ButtonBar.ButtonData.OK_DONE);
-                        dialog.setContentText("There should be only one mayor.");
-                        dialog.getDialogPane().getButtonTypes().add(type);
-                        dialog.showAndWait();
-                  }
+
+
             }
       }
       public boolean regexdate(){
@@ -202,12 +197,15 @@ public class EditshController {
              try {
                    Dialog<String> dialog = new Dialog<>();
                    String chooseprs = prs.getText();
-                   if (chooseprs.equals(Data.shahrdar.getPersonelynumber())){
-                           table.getItems().remove(Data.shahrdar);
-                           //ShahrdarDAO.deleteshwithprs(prs.getText());
-                           txtResult.setText("Informations are deleted.");
+                   for (int i=0;i<Data.shlist.size();i++) {
+                         if (chooseprs.equals(Data.shlist.get(i).getPersonelynumber())) {
+                               table.getItems().remove(Data.shlist.get(i));
+                               Data.shlist.remove(i);
+                               //ShahrdarDAO.deleteshwithprs(prs.getText());
+                               txtResult.setText("Informations are deleted.");
+                         }
                    }
-                   //File.writeshahrdar("C:\\Users\\Asus\\IdeaProjects\\hoshmandcity\\src\\main\\java\\Model\\1.Shahrdar");
+                   File.writeshahrdar("C:\\Users\\Asus\\IdeaProjects\\hoshmandcity\\src\\main\\java\\Model\\1.Shahrdar",Data.shlist);
 //                   else if(!chooseprs.equals(Data.shahrdar.getPersonelynumber())){
 //                         dialog.setTitle("Dialog box");
 //                         ButtonType type = new ButtonType("Ok", ButtonBar.ButtonData.OK_DONE);

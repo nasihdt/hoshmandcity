@@ -31,16 +31,19 @@ public class File {
         }
         return array;
     }
-    public static void writeshahrdar(String file){
+    public static void writeshahrdar(String file,ArrayList<Shahrdar> arrdataSh){
         try {
-                FileWriter writer = new FileWriter(file);
-                Data.shahrdar = new Shahrdar();
-                String str = Data.shahrdar.getName()+"`"+Data.shahrdar.getLastname()+"`"+Data.shahrdar.getPersonelynumber()+"`"+Data.shahrdar.getHire_date()
-                        +"`"+Data.shahrdar.getSalary()+"`"+Data.shahrdar.getSabeghe();
-
+            FileWriter writer = new FileWriter(file);
+            int size = arrdataSh.size();
+            for (int i=0;i<size;i++){
+                String str = arrdataSh.get(i).getName()+"`"+arrdataSh.get(i).getLastname()+"`"+arrdataSh.get(i).getPersonelynumber()+
+                        "`"+arrdataSh.get(i).getHire_date()+"`"+arrdataSh.get(i).getSalary()+"`"+arrdataSh.get(i).getSabeghe();
                 writer.write(str);
-                writer.write("\n");
-                writer.close();
+                if (i<size-1){
+                    writer.write("\n");
+                }
+            }
+            writer.close();
         }
         catch (Exception e){
             e.printStackTrace();

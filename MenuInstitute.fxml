@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuInstituteController">
+   <children>
+      <ImageView fitHeight="581.0" fitWidth="768.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@waves_violet-37d9022b34fe32b9a566104ee1b0b8e9.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="257.0" layoutY="30.0" text="*Menu institute*">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="33.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_manager" layoutX="320.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: #842DCE;" text="Branch manager" />
+      <Button fx:id="btn_registrat" layoutX="345.0" layoutY="164.0" onAction="#loginreg" mnemonicParsing="false" style="-fx-background-color: #842DCE;" text="Registrar" />
+      <Button fx:id="btn_teach" layoutX="348.0" layoutY="224.0" mnemonicParsing="false" onAction="#loginteacher" style="-fx-background-color: #9370DB;" text="Teacher" />
+      <Button fx:id="btn_student" layoutX="348.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: #9370DB;" text="Student" />
+      <Button fx:id="btn_back" layoutX="32.0" layoutY="19.0" mnemonicParsing="false" onAction="#backmenupage1" style="-fx-background-color: #B048B5;" text="Back" />
+   </children>
+</AnchorPane>
